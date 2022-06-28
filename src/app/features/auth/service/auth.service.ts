@@ -107,26 +107,21 @@ export class AuthService {
   }
 
   private async loginWith(providerId: string, options?: any) {
-    try {
-      const user = await this.socialService.signIn(providerId);
-      console.log("USER: ", user);
-      return this.http
-        .post<TokenResponse>(
-          `${api}/auth/${this.getProviderUri(providerId)}-login`,
-          {
-            name: user.name,
-            accessToken: user.authToken,
-            authorizationCode: user.authorizationCode,
-            type: 'web',
-          },
-        )
-        .pipe(
-          take(1),
-          mergeMap(tokens => this.setTokens(tokens)),
-        );
-    } catch (err) {
-      console.log("USER ERR: ", err);
-    }
+    const user = await this.socialService.signIn(providerId);
+    return this.http
+      .post<TokenResponse>(
+        `${api}/auth/${this.getProviderUri(providerId)}-login`,
+        {
+          name: user.name,
+          accessToken: user.authToken,
+          authorizationCode: user.authorizationCode,
+          type: 'web',
+        },
+      )
+      .pipe(
+        take(1),
+        mergeMap(tokens => this.setTokens(tokens)),
+      );
   }
 
   private getProviderUri(providerId: string) {

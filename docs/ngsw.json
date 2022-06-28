@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1656425862307,
+  "timestamp": 1656428264933,
   "index": "/client/index.html",
   "assetGroups": [
     {
@@ -50,7 +50,7 @@
     "/client/assets/icons/icon-512x512.png": "3a4161c385702213d43db9b7f7f8f8ef7488270a",
     "/client/assets/tones/message-tone.mp3": "adc3be18291f748dd1d7360065caa42d239a7a99",
     "/client/index.html": "d12d754522eab83a568768ca0075e6bb72a7f714",
-    "/client/main.js": "a2a03239542e50420fca9308b61917ad7575ea94",
+    "/client/main.js": "c22cf9dc1de3dd6f9c194b4a0d97536e34f22529",
     "/client/manifest.webmanifest": "fa441f42eb8a152517d7120356cf3221a8b7c529",
     "/client/ngsw-worker.js": "0132110e62e1595a862ba900ab8f97e199a5eea7",
     "/client/polyfills.js": "9233ef1728e8d83a586be662b5e58db700a03034",

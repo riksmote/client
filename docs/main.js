@@ -1013,21 +1013,15 @@ class AuthService {
     }
     loginWith(providerId, options) {
         return (0,tslib__WEBPACK_IMPORTED_MODULE_9__.__awaiter)(this, void 0, void 0, function* () {
-            try {
-                const user = yield this.socialService.signIn(providerId);
-                console.log("USER: ", user);
-                return this.http
-                    .post(`${api}/auth/${this.getProviderUri(providerId)}-login`, {
-                    name: user.name,
-                    accessToken: user.authToken,
-                    authorizationCode: user.authorizationCode,
-                    type: 'web',
-                })
-                    .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.take)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.mergeMap)(tokens => this.setTokens(tokens)));
-            }
-            catch (err) {
-                console.log("USER ERR: ", err);
-            }
+            const user = yield this.socialService.signIn(providerId);
+            return this.http
+                .post(`${api}/auth/${this.getProviderUri(providerId)}-login`, {
+                name: user.name,
+                accessToken: user.authToken,
+                authorizationCode: user.authorizationCode,
+                type: 'web',
+            })
+                .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.take)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.mergeMap)(tokens => this.setTokens(tokens)));
         });
     }
     getProviderUri(providerId) {
