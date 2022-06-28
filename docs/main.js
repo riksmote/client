@@ -1013,15 +1013,21 @@ class AuthService {
     }
     loginWith(providerId, options) {
         return (0,tslib__WEBPACK_IMPORTED_MODULE_9__.__awaiter)(this, void 0, void 0, function* () {
-            const user = yield this.socialService.signIn(providerId);
-            return this.http
-                .post(`${api}/auth/${this.getProviderUri(providerId)}-login`, {
-                name: user.name,
-                accessToken: user.authToken,
-                authorizationCode: user.authorizationCode,
-                type: 'web',
-            })
-                .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.take)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.mergeMap)(tokens => this.setTokens(tokens)));
+            try {
+                const user = yield this.socialService.signIn(providerId);
+                console.log("USER: ", user);
+                return this.http
+                    .post(`${api}/auth/${this.getProviderUri(providerId)}-login`, {
+                    name: user.name,
+                    accessToken: user.authToken,
+                    authorizationCode: user.authorizationCode,
+                    type: 'web',
+                })
+                    .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_10__.take)(1), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.mergeMap)(tokens => this.setTokens(tokens)));
+            }
+            catch (err) {
+                console.log("USER ERR: ", err);
+            }
         });
     }
     getProviderUri(providerId) {
@@ -3239,7 +3245,7 @@ class RecoverPageComponent {
             .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.tap)(clear, clear), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.take)(1))
             .subscribe(() => sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
             title: 'Good job!',
-            text: 'Check your email and change your password!',
+            text: 'Check your email (spamfolder) and change your password!',
             icon: 'success',
         }));
     }
@@ -4075,33 +4081,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "environment": () => (/* binding */ environment)
 /* harmony export */ });
+// export const environment = {
+//   production: false,
+//   api: 'https://riksmote.herokuapp.com',
+//   socket: 'https://riksmote.herokuapp.com',
+//   apps: {
+//     facebook: '676046816978387',
+//     google: '847417968911-lim6ak6h6g0p49g2ml6odu3j7a3eeb1h.apps.googleusercontent.com',
+//     apple: {
+//       clientId: '!nest-auth.ubbly.club',
+//       redirectUri: '!https://nest-auth.ubbly.club/',
+//     },
+//   },
+// };
 const environment = {
     production: false,
-    api: 'https://riksmote.herokuapp.com',
-    socket: 'https://riksmote.herokuapp.com',
+    api: 'http://localhost:3000',
+    socket: 'http://localhost:3000',
     apps: {
         facebook: '676046816978387',
         google: '847417968911-lim6ak6h6g0p49g2ml6odu3j7a3eeb1h.apps.googleusercontent.com',
         apple: {
-            clientId: '!nest-auth.ubbly.club',
-            redirectUri: '!https://nest-auth.ubbly.club/',
+            clientId: 'nest-auth.ubbly.club',
+            redirectUri: 'https://nest-auth.ubbly.club/',
         },
     },
 };
-// export const environment = {
-//   production: false,
-//   api: 'http://localhost:3000',
-//   socket: 'http://localhost:3000',
-//   apps: {
-//     facebook: '513024756601831',
-//     google:
-//       '331672215174-0hlpm8fhjphiou05ovsd82vglor401ct.apps.googleusercontent.com',
-//     apple: {
-//       clientId: 'nest-auth.ubbly.club',
-//       redirectUri: 'https://nest-auth.ubbly.club/',
-//     },
-//   },
-// };
 
 
 /***/ }),
