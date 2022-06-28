@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1656405223706,
+  "timestamp": 1656408551863,
   "index": "/riksmote.github.io/index.html",
   "assetGroups": [
     {
@@ -49,7 +49,7 @@
     "/riksmote.github.io/assets/icons/icon-384x384.png": "c7eebea958e10365ca802a044a042149ce19f945",
     "/riksmote.github.io/assets/icons/icon-512x512.png": "3a4161c385702213d43db9b7f7f8f8ef7488270a",
     "/riksmote.github.io/assets/tones/message-tone.mp3": "adc3be18291f748dd1d7360065caa42d239a7a99",
-    "/riksmote.github.io/index.html": "91cd524520c04945925928e1fd377588ceda65da",
+    "/riksmote.github.io/index.html": "b37494e038fca9152bacd3a36d27e816b437017e",
     "/riksmote.github.io/main.js": "693faab83285cdfc96b0d8fd6aa78fee15202af7",
     "/riksmote.github.io/manifest.webmanifest": "fa441f42eb8a152517d7120356cf3221a8b7c529",
     "/riksmote.github.io/ngsw-worker.js": "0132110e62e1595a862ba900ab8f97e199a5eea7",

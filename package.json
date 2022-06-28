@@ -1,18 +1,19 @@
 {
   "name": "task",
   "version": "0.0.0",
+  "homepage": "https://riksmote.github.io/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "start:worker": "ng build; npm run store:404; npm run store:worker; http-server -p 8080 -c-1 dist/task",
     "build": "ng build --configuration production; npm run store:worker;",
+    "build:ghpages": "ng build --output-path docs --base-href /riksmote.github.io/",
     "store:404": "cp ./src/index.html ./dist/task/404.html",
     "store:worker": "cp ./src/ngsw-worker.js ./dist/task",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "ghpages": "ng build --output-path docs --base-href /riksmote.github.io/"
+    "format": "prettier --write \"src/**/*.ts\""
   },
   "private": true,
   "dependencies": {
