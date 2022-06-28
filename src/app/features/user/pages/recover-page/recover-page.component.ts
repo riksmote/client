@@ -39,7 +39,7 @@ export class RecoverPageComponent {
       .subscribe(() =>
         Swal.fire({
           title: 'Good job!',
-          text: 'Check your email and change your password!',
+          text: 'Check your email (spamfolder) and change your password!',
           icon: 'success',
         }),
       );
