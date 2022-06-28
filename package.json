@@ -7,13 +7,14 @@
     "start": "ng serve",
     "start:worker": "ng build; npm run store:404; npm run store:worker; http-server -p 8080 -c-1 dist/task",
     "build": "ng build --configuration production; npm run store:worker;",
-    "build:ghpages": "ng build --output-path docs --base-href /riksmote.github.io/",
+    "build:ghpages": "ng build --output-path docs --base-href //",
     "store:404": "cp ./src/index.html ./dist/task/404.html",
     "store:worker": "cp ./src/ngsw-worker.js ./dist/task",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "push": "npm run build:ghpages && git push && rm -r ./docs" 
   },
   "private": true,
   "dependencies": {

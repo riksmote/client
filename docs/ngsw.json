@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1656408551863,
-  "index": "/riksmote.github.io/index.html",
+  "timestamp": 1656408834883,
+  "index": "//index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,15 +11,15 @@
         "ignoreVary": true
       },
       "urls": [
-        "/riksmote.github.io/index.html",
-        "/riksmote.github.io/main.js",
-        "/riksmote.github.io/manifest.webmanifest",
-        "/riksmote.github.io/ngsw-worker.js",
-        "/riksmote.github.io/polyfills.js",
-        "/riksmote.github.io/runtime.js",
-        "/riksmote.github.io/scripts.js",
-        "/riksmote.github.io/styles.css",
-        "/riksmote.github.io/vendor.js"
+        "//index.html",
+        "//main.js",
+        "//manifest.webmanifest",
+        "//ngsw-worker.js",
+        "//polyfills.js",
+        "//runtime.js",
+        "//scripts.js",
+        "//styles.css",
+        "//vendor.js"
       ],
       "patterns": []
     },
@@ -31,33 +31,33 @@
         "ignoreVary": true
       },
       "urls": [
-        "/riksmote.github.io/assets/icon.png",
-        "/riksmote.github.io/assets/icons/icon-192x192.png",
-        "/riksmote.github.io/assets/icons/icon-256x256.png",
-        "/riksmote.github.io/assets/icons/icon-384x384.png",
-        "/riksmote.github.io/assets/icons/icon-512x512.png",
-        "/riksmote.github.io/assets/tones/message-tone.mp3"
+        "//assets/icon.png",
+        "//assets/icons/icon-192x192.png",
+        "//assets/icons/icon-256x256.png",
+        "//assets/icons/icon-384x384.png",
+        "//assets/icons/icon-512x512.png",
+        "//assets/tones/message-tone.mp3"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/riksmote.github.io/assets/icon.png": "67e0039a0bdb2395c556e3139786cb7e5d0ed943",
-    "/riksmote.github.io/assets/icons/icon-192x192.png": "7090f786633bcfa2b45b7f3cd7f27d17ea88bb2b",
-    "/riksmote.github.io/assets/icons/icon-256x256.png": "f42244f926352aad596491ae2656337ba33646c8",
-    "/riksmote.github.io/assets/icons/icon-384x384.png": "c7eebea958e10365ca802a044a042149ce19f945",
-    "/riksmote.github.io/assets/icons/icon-512x512.png": "3a4161c385702213d43db9b7f7f8f8ef7488270a",
-    "/riksmote.github.io/assets/tones/message-tone.mp3": "adc3be18291f748dd1d7360065caa42d239a7a99",
-    "/riksmote.github.io/index.html": "b37494e038fca9152bacd3a36d27e816b437017e",
-    "/riksmote.github.io/main.js": "693faab83285cdfc96b0d8fd6aa78fee15202af7",
-    "/riksmote.github.io/manifest.webmanifest": "fa441f42eb8a152517d7120356cf3221a8b7c529",
-    "/riksmote.github.io/ngsw-worker.js": "0132110e62e1595a862ba900ab8f97e199a5eea7",
-    "/riksmote.github.io/polyfills.js": "9233ef1728e8d83a586be662b5e58db700a03034",
-    "/riksmote.github.io/runtime.js": "0ee185beb1d37ab3806b3f05d3fa7ea98f1d798b",
-    "/riksmote.github.io/scripts.js": "77a7d291683369af82deaa710dd99efeff86810e",
-    "/riksmote.github.io/styles.css": "3984e39f19089d729ab4e350abf3f29e982fe444",
-    "/riksmote.github.io/vendor.js": "69ba22a2dd00fd323cb440f6a68ffc7e34e44afb"
+    "//assets/icon.png": "67e0039a0bdb2395c556e3139786cb7e5d0ed943",
+    "//assets/icons/icon-192x192.png": "7090f786633bcfa2b45b7f3cd7f27d17ea88bb2b",
+    "//assets/icons/icon-256x256.png": "f42244f926352aad596491ae2656337ba33646c8",
+    "//assets/icons/icon-384x384.png": "c7eebea958e10365ca802a044a042149ce19f945",
+    "//assets/icons/icon-512x512.png": "3a4161c385702213d43db9b7f7f8f8ef7488270a",
+    "//assets/tones/message-tone.mp3": "adc3be18291f748dd1d7360065caa42d239a7a99",
+    "//index.html": "51bfea353d615a831f6f9fa28ee48ec6b56cc63b",
+    "//main.js": "693faab83285cdfc96b0d8fd6aa78fee15202af7",
+    "//manifest.webmanifest": "fa441f42eb8a152517d7120356cf3221a8b7c529",
+    "//ngsw-worker.js": "0132110e62e1595a862ba900ab8f97e199a5eea7",
+    "//polyfills.js": "9233ef1728e8d83a586be662b5e58db700a03034",
+    "//runtime.js": "0ee185beb1d37ab3806b3f05d3fa7ea98f1d798b",
+    "//scripts.js": "77a7d291683369af82deaa710dd99efeff86810e",
+    "//styles.css": "3984e39f19089d729ab4e350abf3f29e982fe444",
+    "//vendor.js": "69ba22a2dd00fd323cb440f6a68ffc7e34e44afb"
   },
   "navigationUrls": [
     {
