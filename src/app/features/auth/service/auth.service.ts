@@ -50,7 +50,7 @@ export class AuthService {
     private socialService: SocialAuthService,
     private router: Router,
     private subscriptionService: SubscriptionService,
-  ) {}
+  ) { }
 
   login(user: Partial<User>) {
     return this.http
@@ -107,22 +107,26 @@ export class AuthService {
   }
 
   private async loginWith(providerId: string, options?: any) {
-    const user = await this.socialService.signIn(providerId);
-
-    return this.http
-      .post<TokenResponse>(
-        `${api}/auth/${this.getProviderUri(providerId)}-login`,
-        {
-          name: user.name,
-          accessToken: user.authToken,
-          authorizationCode: user.authorizationCode,
-          type: 'web',
-        },
-      )
-      .pipe(
-        take(1),
-        mergeMap(tokens => this.setTokens(tokens)),
-      );
+    try {
+      const user = await this.socialService.signIn(providerId);
+      console.log("USER: ", user);
+      return this.http
+        .post<TokenResponse>(
+          `${api}/auth/${this.getProviderUri(providerId)}-login`,
+          {
+            name: user.name,
+            accessToken: user.authToken,
+            authorizationCode: user.authorizationCode,
+            type: 'web',
+          },
+        )
+        .pipe(
+          take(1),
+          mergeMap(tokens => this.setTokens(tokens)),
+        );
+    } catch (err) {
+      console.log("USER ERR: ", err);
+    }
   }
 
   private getProviderUri(providerId: string) {
